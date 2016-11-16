@@ -1,0 +1,24 @@
+body{
+    background-color: #2F4050;
+}
+
+.btn{
+    background-color: #1AB394;
+}
+
+.jumbotron{
+    background-color: #999C9E;
+    color: #2F4050;
+}
+
+.panel-heading{
+    background-color: #999C9E !important;
+}
+
+.panel-body{
+    background-color: #F3F3F4;
+}
+
+.panel-title{
+    color: #2F4050;
+}

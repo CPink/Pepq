@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Preliminary Estate Planning Questionnaire</h1>
+        </div>
+        <div id="pepq">
+             <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">Your Current Estate Plan</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <h4 class="panel-title text-center">
+                            Which of the following estate planning documents do you have?
+                        </h4>
+                        <br>
+                        <ul class="list-group">
+                            <li class="list-group-item">Will (Year document was created) <input v-model="s1q1.ans" placeholder="Year" type="text"/></li>
+                            <p>The year is: {{s1q1.ans}}</p>
+                            <li class="list-group-item">Trust (of any type)(Year) <input v-model="s1q2.ans" type="text" placeholder="Year"></li>
+                            <p>The year is: {{s1q2.ans}}</p>
+                            <li class="list-group-item">Finacial Power of Attorney (year) <input v-model="s1q3.ans" type="text" placeholder="Year"></li>
+                            <p>The year is: {{s1q3.ans}}</p>
+                            <li class="list-group-item">Medical Power of Attorney (year)<input v-model="s1q4.ans" type="text" placeholder="Year"></li>
+                            <p>The year is: {{s1q4.ans}}</p>
+                            <li class="list-group-item">Advanced Healthcare Directive(Living Will) (year) <input v-model="s1q5.ans" type="text" placeholder="Year"></li>
+                            <p>The year is: {{s1q5.ans}}</p>
+                            <li class="list-group-item">Physician Orders for Scope of Treatment(POST)(year) <input v-model="s1q6.ans" type="text" placeholder="Year"></li>
+                            <p>The year is: {{s1q6.ans}}</p>
+                            <li class="list-group-item checkbox"><input type="checkbox" value="I do not have any estate planning documnets" v-model="check1">I do not have any estate planning documnets</li>
+                            <li class="list-group-item checkbox"><input type="checkbox" value="I have estate planning documents but i need to amend or replace some or all of them" v-model="check2">I have estate planning documents but i need to amend or replace some or all of them</li>
+                            <li class="list-group-item checkbox"><input type="checkbox"  value="I have all of the estate planning documents i need but would like to be reviewed" v-model="check3">I have all of the estate planning documents i need but would like to be reviewed</li>
+                        </ul>
+                        <div>
+                            <button class="btn greenColor" v-on:click="subS1">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pepq2">
+            <quest2></quest2>
+        </div>
+
+        <div id="pepq3">
+            <quest3></quest3>
+        </div>
+
+        <div id="pepq4">
+            <quest4></quest4>
+        </div>
+
+    </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/firebase/3.6.0/firebase.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vuefire/1.3.0/vuefire.js"></script>
+    <script type="text/javascript" src="vue/js/home.js"></script>
+</body>
+
+</html>
